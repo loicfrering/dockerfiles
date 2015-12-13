@@ -2,7 +2,7 @@ FROM debian:jessie
 MAINTAINER Loïc Frering <loic.frering@gmail.com>
 
 # Configure sources
-RUN echo "deb http://packages.erlang-solutions.com/debian wheezy contrib" > /etc/apt/sources.list.d/erlang-solutions.list
+RUN echo "deb http://packages.erlang-solutions.com/debian jessie contrib" > /etc/apt/sources.list.d/erlang-solutions.list
 RUN apt-key adv --fetch-keys http://packages.erlang-solutions.com/debian/erlang_solutions.asc
 
 # Install common packages
@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Elixir
 RUN apt-get install -y \
-    elixir=1.0.5-2
+    elixir=1.1.1-2
 
 # Install hex
 RUN mix local.hex --force
