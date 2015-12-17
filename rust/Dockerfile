@@ -3,9 +3,11 @@ MAINTAINER Loïc Frering <loic.frering@gmail.com>
 
 # Install common packages
 RUN apt-get update && apt-get install -y \
+    gcc \
     curl \
     file \
-    locales
+    locales \
+    libssl-dev
 
 # Install Rust
 RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --disable-sudo --yes
