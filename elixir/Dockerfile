@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
 
 # Install Elixir
 RUN apt-get install -y \
-    elixir=1.1.1-2
+    elixir=1.1.1-2 \
+    erlang-dev
 
 # Install hex
 RUN mix local.hex --force
